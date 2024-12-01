@@ -7,8 +7,11 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1>Students</h1>
-        <form action="/add" method="POST">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1>Students</h1>
+            <a href="/logout" class="btn btn-danger">Logout</a>
+        </div>
+        <form action="/add" method="POST" class="mt-3">
             <input type="text" name="name" placeholder="Name" required>
             <input type="number" name="age" placeholder="Age" required>
             <input type="text" name="grade" placeholder="Grade" required>

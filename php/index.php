@@ -2,21 +2,23 @@
 // Koneksi dan fungsi lainnya tetap sama seperti yang Anda kirimkan
 // Fungsi untuk membuka koneksi ke database SQLite3, select, update, delete, dan add
 // function connectDB() {
-    // Membuka koneksi ke database SQLite
-    include 'app.php';
-    $students=selectStudents();
-    
+// Membuka koneksi ke database SQLite
+include 'app.php';
+$students = selectStudents();
+
 // }
 ?>
 
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Siswa</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -56,11 +58,11 @@
                 </thead>
                 <tbody>
                     <?php
-                        // Ambil data siswa dari database
-                        // $students = selectStudents();
-                        if ($students) {
-                            foreach ($students as $student) {
-                                echo "<tr>
+                    // Ambil data siswa dari database
+                    // $students = selectStudents();
+                    if ($students) {
+                        foreach ($students as $student) {
+                            echo "<tr>
                                     <td>" . $student['id'] . "</td>
                                     <td>" . $student['name'] . "</td>
                                     <td>" . $student['age'] . "</td>
@@ -70,8 +72,8 @@
                                         <a href='delete.php?id=" . $student['id'] . "' class='btn btn-delete' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a>
                                     </td>
                                 </tr>";
-                            }
                         }
+                    }
                     ?>
                 </tbody>
             </table>
@@ -98,4 +100,5 @@
     }
     ?>
 </body>
+
 </html>
